@@ -6,9 +6,7 @@ This project is a backend API for a Bike Servicing Management System. It allows 
 
 ## Live Backend Link
 
-[**[YOUR LIVE BACKEND LINK HERE - e.g., https://bike-service-api.railway.app]**](https://bike-service-api.railway.app)
-
-_Replace the placeholder link above with the actual URL of your deployed backend._
+[**[https://bike-service-server-beta.vercel.app/]**](https://bike-service-server-beta.vercel.app/)
 
 ## Tech Stack
 
@@ -26,8 +24,8 @@ Follow these steps to set up the Bike Servicing Management API locally:
 1.  **Clone the repository:**
 
     ```bash
-    git clone [YOUR_REPOSITORY_URL]
-    cd [YOUR_REPOSITORY_NAME]
+    git clone https://github.com/sakib-xrz/level-2-batch-4-assignment-8.git
+    cd level-2-batch-4-assignment-8
     ```
 
 2.  **Install dependencies:**
@@ -56,8 +54,6 @@ Follow these steps to set up the Bike Servicing Management API locally:
       JWT_REFRESH_TOKEN_EXPIRES_IN="your refresh token expire"
       ```
 
-      _Ensure the `DATABASE_URL` matches your PostgreSQL connection string._
-
 4.  **Run Prisma migrations:**
 
     ```bash
@@ -79,8 +75,6 @@ Follow these steps to set up the Bike Servicing Management API locally:
     ```bash
     npm run dev
     ```
-
-    This will start the backend server, typically on `http://localhost:8000` (as defined in your `.env` file).
 
 7.  **API Endpoints:**
     You can test the API endpoints using a tool like Postman. Import the `postman_collection.json` file provided in this assignment to easily interact with the API.
