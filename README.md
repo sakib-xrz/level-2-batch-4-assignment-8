@@ -6,7 +6,7 @@ This project is a backend API for a Bike Servicing Management System. It allows 
 
 ## Live Backend Link
 
-**[https://bike-service-server-beta.vercel.app/]**(https://bike-service-server-beta.vercel.app/)
+[**https://bike-service-server-beta.vercel.app/**](https://bike-service-server-beta.vercel.app/)
 
 ## Tech Stack
 
