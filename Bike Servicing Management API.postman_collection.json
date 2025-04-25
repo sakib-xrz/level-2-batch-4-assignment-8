@@ -1,0 +1,342 @@
+{
+	"info": {
+		"_postman_id": "4e40b985-4f88-4c58-b3a3-16bc0e8d32e2",
+		"name": "Bike Servicing Management API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38345873",
+		"_collection_link": "https://flexpoint-3075.postman.co/workspace/My-Workspace~98db7522-9e7f-4043-8f51-5fdd111ec263/collection/38345873-4e40b985-4f88-4c58-b3a3-16bc0e8d32e2?action=share&source=collection_link&creator=38345873"
+	},
+	"item": [
+		{
+			"name": "Customers",
+			"item": [
+				{
+					"name": "Create Customer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"John Doe\",\n  \"email\": \"john.doe@example.com\",\n  \"phone\": \"123-456-7890\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/customers",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"customers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Customers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/customers",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"customers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Customer by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/customers/fb734213-a73b-49b4-a1cb-c95df75af998",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"customers",
+								"fb734213-a73b-49b4-a1cb-c95df75af998"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Customer",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Johnathan Doe\",\n  \"phone\": \"555-123-9999\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/customers/fb734213-a73b-49b4-a1cb-c95df75af998",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"customers",
+								"fb734213-a73b-49b4-a1cb-c95df75af998"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Customer",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/customers/fb734213-a73b-49b4-a1cb-c95df75af998",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"customers",
+								"fb734213-a73b-49b4-a1cb-c95df75af998"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Bikes",
+			"item": [
+				{
+					"name": "Add New Bike",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"brand\": \"Yamaha\",\n  \"model\": \"R15\",\n  \"year\": 2022,\n  \"customerId\": \"01eac34a-5b07-4d93-a26e-d739eaab6bc0\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/bikes",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"bikes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Bikes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/bikes",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"bikes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Bike by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/bikes/6d0ddbff-a110-4019-ab95-70ebb63b7358",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"bikes",
+								"6d0ddbff-a110-4019-ab95-70ebb63b7358"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Services",
+			"item": [
+				{
+					"name": "Create Service Record",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"bikeId\": \"6d0ddbff-a110-4019-ab95-70ebb63b7358\",\n  \"serviceDate\": \"2025-04-11T10:00:00.000Z\",\n  \"description\": \"Oil change\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/services",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"services"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Service Records",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/services",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"services"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Service Record by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/services/e79ce4fc-24fa-4411-8a9c-f4b2b901c97f",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"services",
+								"e79ce4fc-24fa-4411-8a9c-f4b2b901c97f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Complete Service",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"completionDate\": \"2025-04-11T15:30:00.000Z\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/services/e79ce4fc-24fa-4411-8a9c-f4b2b901c97f/complete",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"services",
+								"e79ce4fc-24fa-4411-8a9c-f4b2b901c97f",
+								"complete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Pending or Overdue Services",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/services/status",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"services",
+								"status"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:8000",
+			"type": "string"
+		}
+	]
+}

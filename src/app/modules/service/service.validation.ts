@@ -22,13 +22,15 @@ const CreateServiceSchema = z.object({
       })
       .min(10, 'Description must be at least 10 characters')
       .max(500, 'Description must be at most 500 characters'),
-    status: z.enum(
-      [ServiceStatus.PENDING, ServiceStatus.IN_PROGRESS, ServiceStatus.DONE],
-      {
-        required_error: 'Status is required',
-        invalid_type_error: 'Status must be one of the predefined values',
-      },
-    ),
+    status: z
+      .enum(
+        [ServiceStatus.PENDING, ServiceStatus.IN_PROGRESS, ServiceStatus.DONE],
+        {
+          required_error: 'Status is required',
+          invalid_type_error: 'Status must be one of the predefined values',
+        },
+      )
+      .optional(),
   }),
 });
 
